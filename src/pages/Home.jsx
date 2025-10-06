@@ -162,7 +162,7 @@ export default function Home() {
               </h2>
               <p className="mt-4 text-lg text-slate-700 dark:text-slate-300">I'm a web developer from Sri Lanka with a passion for creating dynamic and responsive web applications with experience in Frontend and Backend development.</p>
               <div className="mt-6 flex items-center gap-4 justify-center">
-                <a href="#projects" className="px-4 py-2 bg-sky-600 text-white rounded shadow hover:bg-sky-700">See projects</a>
+                <a href="#about" className="px-4 py-2 bg-sky-600 text-white rounded shadow hover:bg-sky-700">Learn More</a>
                 <a href="#contact" className="px-4 py-2 border border-slate-300 rounded hover:bg-slate-50">Contact me</a>
               </div>
             </div>
@@ -170,13 +170,83 @@ export default function Home() {
         </section>
 
         <section id="about" className="snap-start min-h-screen flex items-center">
-              <div className="max-w-5xl mx-auto px-6 py-12 w-full grid md:grid-cols-2 gap-8 items-center">
+              <div className="max-w-5xl mx-auto px-6 py-12 w-full grid md:grid-cols-2 gap-6 items-center">
             <div className="flex justify-center md:justify-start">
-              <img src="/src/assets/WhatsApp%20Image%202025-09-03%20at%2020.24.41.jpeg" alt="Your Photo" className="w-48 h-48 md:w-64 md:h-64 rounded-full shadow-lg object-cover" loading="lazy" />
+              <img src="/src/assets/WhatsApp%20Image%202025-09-03%20at%2020.24.41.jpeg" alt="Your Photo" className="w-56 h-56 sm:w-64 sm:h-64 md:w-80 md:h-80 rounded-full shadow-lg object-cover md:-mr-4" loading="lazy" />
             </div>
             <div>
               <h3 className="text-2xl font-semibold">About me</h3>
-              <p className="mt-4 text-slate-700 dark:text-slate-300">I'm a front-end focused software engineer with a passion for creating delightful user experiences. I enjoy turning ideas into production-ready applications and learning new technologies.</p>
+              <p className="mt-4 text-slate-700 dark:text-slate-300">Hi, I'm Shanuka Abeysinghe, a web developer from Sri Lanka, born in 2006. My education journey began at Sri Chandananda Buddhist College, Kandy. This diverse educational background has equipped me with a broad perspective and a passion for learning.
+                <br></br><br></br>I am currently an undergraduate at ICBT Kandy Campus pursuing a Bsc(Hons) Software Engineering. My dedication to continuous learning enables me to stay update with new technologies and seeking ways to enhance my skills. Here are some technologies that I have worked with,</p>
+              <div className="mt-4">
+                <p className="text-sm text-slate-500 dark:text-slate-400">Tools & technologies:</p>
+                <div role="list" className="mt-2 flex flex-wrap gap-3">
+                  <span role="listitem" className="px-3 py-1 text-sm font-medium rounded-full bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-100 flex items-center">
+                    <img src="/src/assets/html.png" alt="HTML" className="inline-block mr-2 h-5 w-5 flex-none object-contain" loading="lazy" />
+                    HTML
+                  </span>
+
+                  <span role="listitem" className="px-3 py-1 text-sm font-medium rounded-full bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-100 flex items-center">
+                    <img src="/src/assets/css.png" alt="CSS" className="inline-block mr-2 h-5 w-5 flex-none object-contain" loading="lazy" />
+                    CSS
+                  </span>
+
+                  <span role="listitem" className="px-3 py-1 text-sm font-medium rounded-full bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-100 flex items-center">
+                    <img src="/src/assets/java-script.png" alt="JavaScript" className="inline-block mr-2 h-5 w-5 flex-none object-contain" loading="lazy" />
+                    JavaScript
+                  </span>
+
+                  <span role="listitem" className="px-3 py-1 text-sm font-medium rounded-full bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-100 flex items-center">
+                    <img src="/src/assets/java.png" alt="Java" className="inline-block mr-2 h-5 w-5 flex-none object-contain" loading="lazy" />
+                    Java
+                  </span>
+
+                  <span role="listitem" className="px-3 py-1 text-sm font-medium rounded-full bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-100 flex items-center">
+                    <img src="/src/assets/c-sharp.png" alt="C#" className="inline-block mr-2 h-5 w-5 flex-none object-contain" loading="lazy" />
+                    C#
+                  </span>
+
+                  <span role="listitem" className="px-3 py-1 text-sm font-medium rounded-full bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-100 flex items-center">
+                    <img src="/src/assets/sql-server.png" alt="SQL" className="inline-block mr-2 h-5 w-5 flex-none object-contain" loading="lazy" />
+                    SQL
+                  </span>
+
+                  <span role="listitem" className="px-3 py-1 text-sm font-medium rounded-full bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-100 flex items-center">
+                    <img src="/src/assets/php.png" alt="PHP" className="inline-block mr-2 h-5 w-5 flex-none object-contain" loading="lazy" />
+                    PHP
+                  </span>
+
+                  <span role="listitem" className="px-3 py-1 text-sm font-medium rounded-full bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-100 flex items-center">
+                    <img src="/src/assets/express.png" alt="Express" className="inline-block mr-2 h-5 w-5 flex-none object-contain" loading="lazy" />
+                    Express js
+                  </span>
+
+                  <span role="listitem" className="px-3 py-1 text-sm font-medium rounded-full bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-100 flex items-center">
+                    <img src="/src/assets/react.png" alt="React" className="inline-block mr-2 h-5 w-5 flex-none object-contain" loading="lazy" />
+                    React js
+                  </span>
+
+                  <span role="listitem" className="px-3 py-1 text-sm font-medium rounded-full bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-100 flex items-center">
+                    <img src="/src/assets/node.png" alt="Node" className="inline-block mr-2 h-5 w-5 flex-none object-contain" loading="lazy" />
+                    Node js
+                  </span>
+
+                  <span role="listitem" className="px-3 py-1 text-sm font-medium rounded-full bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-100 flex items-center">
+                    <img src="/src/assets/mongo.png" alt="MongoDB" className="inline-block mr-2 h-5 w-5 flex-none object-contain" loading="lazy" />
+                    MongoDB
+                  </span>
+
+                  <span role="listitem" className="px-3 py-1 text-sm font-medium rounded-full bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-100 flex items-center">
+                    <img src="/src/assets/firestore.png" alt="Firestore" className="inline-block mr-2 h-5 w-5 flex-none object-contain" loading="lazy" />
+                    Firestore
+                  </span>
+
+                  <span role="listitem" className="px-3 py-1 text-sm font-medium rounded-full bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-100 flex items-center">
+                    <img src="/src/assets/vercel.png" alt="Vercel" className="inline-block mr-2 h-5 w-5 flex-none object-contain" loading="lazy" />
+                    Vercel
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -241,7 +311,7 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="fixed bottom-4 left-0 right-0 text-center text-sm text-slate-500">© {new Date().getFullYear()} Your Name</footer>
+      <footer className="fixed bottom-4 left-0 right-0 text-center text-sm text-slate-500">Made with ❤️ by Shanuka Abeysinghe</footer>
     </div>
   )
 }
