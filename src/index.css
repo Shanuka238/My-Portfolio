@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  height: 100%;
+}
+
+:root {
+  --bg: 255 255 255;
+  --surface: 255 255 255;
+  --muted: 100 116 139; /* slate-500 */
+}
+
+.dark {
+  --bg: 2 6 23; /* slate-900 */
+  --surface: 6 8 15; /* slate-950 */
+  --muted: 148 163 184; /* slate-400 */
+}
+
+body {
+  background-color: rgb(var(--bg));
+}
+
+/* Header-only dark mode (applied with .header-dark on the header element) */
+header.header-dark {
+  background-color: rgba(2,6,23,0.6) !important;
+}
+
+/* When header-dark is active, make header text and links white */
+header.header-dark,
+header.header-dark h1,
+header.header-dark nav,
+header.header-dark a {
+  color: rgba(255,255,255,0.95) !important;
+}
+
+header.header-dark a:hover {
+  color: rgba(241,245,249,0.95) !important; /* slightly lighter */
+}
+
+/* Smooth transitions when theme changes */
+* {
+  transition: background-color 250ms ease, color 250ms ease, border-color 200ms ease;
+}
+
+/* Avoid heavy transitions on images and respect reduced motion */
+img, svg {
+  transition: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}
+
+/* Small container utility */
+.container {
+  max-width: 72rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Typewriter cursor */
+.typewriter .cursor {
+  display: inline-block;
+  margin-left: 6px;
+  color: #0ea5e9; /* sky-500 */
+  animation: blink 1s steps(2, start) infinite;
+}
+
+@keyframes blink {
+  to { visibility: hidden; }
+}
