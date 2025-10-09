@@ -134,19 +134,26 @@ export default function Home() {
   <div className="min-h-screen bg-gradient-to-b from-sky-50 to-white dark:from-slate-900 dark:to-slate-800 text-slate-800 dark:text-slate-100">
       {/* Fixed header so sections can be full viewport */}
   <header className="fixed top-0 left-0 right-0 z-20 bg-white/60 backdrop-blur-sm">
-        <div className="max-w-5xl mx-auto p-4 flex items-center justify-between">
+        <div className="max-w-5xl mx-auto p-4 flex items-center relative">
           <a href="#" className="flex items-center gap-3">
             <img src={dark ? '/src/assets/logoW.png' : '/src/assets/logoB.png'} alt="Logo" className="h-10 w-10 object-contain transform scale-110 md:scale-125" />
           </a>
-          <nav className="space-x-6 hidden md:block">
+          <nav className="absolute left-1/2 transform -translate-x-1/2 space-x-6 hidden md:block">
             <a href="#about" className="text-slate-600 hover:text-slate-900">About</a>
             <a href="#experience" className="text-slate-600 hover:text-slate-900">Experience</a>
             <a href="#projects" className="text-slate-600 hover:text-slate-900">Projects</a>
             <a href="#contact" className="text-slate-600 hover:text-slate-900">Contact</a>
           </nav>
-            <div className="ml-4">
-            <ThemeToggle dark={dark} setDark={setDark} />
-          </div>
+            <div className="ml-auto flex items-center gap-3">
+              {/* Download CV - shows text on md+, icon on smaller screens */}
+              <a href="/src/assets/Achintha Shanuka Abeysinghe.pdf" download className="hidden md:inline-block px-3 py-2 bg-sky-600 text-white rounded-md text-sm font-medium hover:bg-sky-700 transition">
+                Download CV
+              </a>
+              <a href="/src/assets/Achintha Shanuka Abeysinghe.pdf" target="_blank" rel="noreferrer" className="md:hidden p-2 rounded hover:bg-white/5">
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-slate-700" viewBox="0 0 20 20" fill="currentColor"><path d="M8 2a1 1 0 011-1h2a1 1 0 011 1v6h3l-5 6-5-6h3V2z"/><path d="M3 13a2 2 0 012-2h10a2 2 0 012 2v3a1 1 0 01-1 1H4a1 1 0 01-1-1v-3z"/></svg>
+              </a>
+              <ThemeToggle dark={dark} setDark={setDark} />
+            </div>
         </div>
       </header>
 
@@ -299,20 +306,20 @@ export default function Home() {
 
             <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
               {/* Card 1 */}
-              <article className="relative p-6 rounded-lg border border-blue-500 bg-slate-900 text-white shadow-lg overflow-hidden">
+              <article className="relative p-6 rounded-2xl border border-blue-500 bg-white/90 dark:bg-slate-800/70 text-slate-800 dark:text-slate-100 shadow-lg backdrop-blur-sm overflow-hidden">
                 <div className="absolute top-4 right-4 flex items-center gap-2">
                   <a href="https://github.com/Shanuka238/Party-Nest-Event-Mangement-system.git" aria-label="GitHub" className="p-1 rounded hover:bg-white/5">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 text-white/90"><path d="M12 .5a12 12 0 00-3.8 23.4c.6.1.8-.3.8-.6v-2.3c-3.3.7-4-1.6-4-1.6-.5-1.3-1.1-1.6-1.1-1.6-.9-.6.1-.6.1-.6 1 .1 1.6 1 1.6 1 .9 1.6 2.4 1.1 3 .8.1-.7.4-1.1.7-1.4-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.4 1.2-3.3-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 016 0c2.2-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.1.8.9 1.2 2 1.2 3.3 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.3v3.4c0 .3.2.7.8.6A12 12 0 0012 .5z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 text-slate-700 dark:text-white/90"><path d="M12 .5a12 12 0 00-3.8 23.4c.6.1.8-.3.8-.6v-2.3c-3.3.7-4-1.6-4-1.6-.5-1.3-1.1-1.6-1.1-1.6-.9-.6.1-.6.1-.6 1 .1 1.6 1 1.6 1 .9 1.6 2.4 1.1 3 .8.1-.7.4-1.1.7-1.4-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.4 1.2-3.3-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 016 0c2.2-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.1.8.9 1.2 2 1.2 3.3 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.3v3.4c0 .3.2.7.8.6A12 12 0 0012 .5z"/></svg>
                   </a>
                   <a href="https://party-nest-event-mangement-system.vercel.app/" aria-label="Open project" className="p-1 rounded hover:bg-white/5">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-5 h-5 text-white/90"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 3h7v7M10 14L21 3"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-5 h-5 text-slate-700 dark:text-white/90"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 3h7v7M10 14L21 3"/></svg>
                   </a>
                 </div>
 
                 <h4 className="text-2xl font-bold text-blue-400">Party Nest</h4>
-                <p className="text-sm text-slate-400 mt-1">2025</p>
+                <p className="text-sm text-slate-500 mt-1 dark:text-slate-300">2025</p>
 
-                <p className="mt-4 text-sm text-slate-200 leading-relaxed">A dynamic web application designed that allows users to book their event, customize events, and organize them. It offers some features that enhance user experience and streamline the ......</p>
+                <p className="mt-4 text-sm text-slate-700 dark:text-slate-200 leading-relaxed">A dynamic web application designed that allows users to book their event, customize events, and organize them. It offers some features that enhance user experience and streamline the ......</p>
 
                 <div className="mt-5 flex flex-wrap gap-2">
                   <span className="inline-block bg-blue-500/20 border border-blue-500 text-blue-400 px-3 py-1 rounded-full text-xs">ReactJS</span>
@@ -324,17 +331,17 @@ export default function Home() {
               </article>
 
               {/* Card 2 */}
-              <article className="relative p-6 rounded-lg border border-blue-500 bg-slate-900 text-white shadow-lg overflow-hidden">
+              <article className="relative p-6 rounded-2xl border border-blue-500 bg-white/90 dark:bg-slate-800/70 text-slate-800 dark:text-slate-100 shadow-lg backdrop-blur-sm overflow-hidden">
                 <div className="absolute top-4 right-4 flex items-center gap-2">
                   <a href="https://github.com/Shanuka238/Fitzone-Fitness-Center" aria-label="GitHub" className="p-1 rounded hover:bg-white/5">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 text-white/90"><path d="M12 .5a12 12 0 00-3.8 23.4c.6.1.8-.3.8-.6v-2.3c-3.3.7-4-1.6-4-1.6-.5-1.3-1.1-1.6-1.1-1.6-.9-.6.1-.6.1-.6 1 .1 1.6 1 1.6 1 .9 1.6 2.4 1.1 3 .8.1-.7.4-1.1.7-1.4-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.4 1.2-3.3-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 016 0c2.2-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.1.8.9 1.2 2 1.2 3.3 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.3v3.4c0 .3.2.7.8.6A12 12 0 0012 .5z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 text-slate-700 dark:text-white/90"><path d="M12 .5a12 12 0 00-3.8 23.4c.6.1.8-.3.8-.6v-2.3c-3.3.7-4-1.6-4-1.6-.5-1.3-1.1-1.6-1.1-1.6-.9-.6.1-.6.1-.6 1 .1 1.6 1 1.6 1 .9 1.6 2.4 1.1 3 .8.1-.7.4-1.1.7-1.4-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.4 1.2-3.3-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 016 0c2.2-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.1.8.9 1.2 2 1.2 3.3 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.3v3.4c0 .3.2.7.8.6A12 12 0 0012 .5z"/></svg>
                   </a>
                 </div>
 
                 <h4 className="text-2xl font-bold text-blue-400">Fitzone Fitness</h4>
-                <p className="text-sm text-slate-400 mt-1">2025</p>
+                <p className="text-sm text-slate-500 mt-1 dark:text-slate-300">2025</p>
 
-                <p className="mt-4 text-sm text-slate-200 leading-relaxed">A simple web application designed that allows users to make gym schedules, book schedules, and provide a efficient member-staff communication. This application is built by usi.....</p>
+                <p className="mt-4 text-sm text-slate-700 dark:text-slate-200 leading-relaxed">A simple web application designed that allows users to make gym schedules, book schedules, and provide a efficient member-staff communication. This application is built by usi.....</p>
 
                 <div className="mt-5 flex flex-wrap gap-2">
                   <span className="inline-block bg-blue-500/20 border border-blue-500 text-blue-400 px-3 py-1 rounded-full text-xs">HTML</span>
@@ -350,11 +357,29 @@ export default function Home() {
 
         <section id="contact" className="snap-start min-h-screen flex items-center">
           <div className="max-w-3xl mx-auto px-6 py-12 w-full">
-            <div className="bg-white/90 dark:bg-slate-800/70 backdrop-blur-sm rounded-2xl shadow-lg p-8">
-              <h3 className="text-2xl font-semibold">Contact</h3>
-              <p className="mt-2 text-slate-600 dark:text-slate-300">Have a project or just want to say hi? Fill the form and I'll get back to you.</p>
+            <div className="bg-white/90 dark:bg-slate-900/80 backdrop-blur-sm rounded-2xl shadow-lg p-8 text-center">
+              <h3 className="text-4xl font-extrabold text-slate-900 dark:text-white mb-4">Contact Me</h3>
+              <p className="mx-auto max-w-2xl text-slate-700 dark:text-slate-300">I'm available for collaborations, or to answer any questions. Reach out on any platform below or send me an email</p>
 
-              <ContactForm />
+              <div className="mt-8 flex items-center justify-center gap-8">
+                <a href="https://github.com/Shanuka238" target="_blank" rel="noreferrer" className="text-slate-700 dark:text-slate-200 hover:text-sky-600">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8"><path d="M12 .5a12 12 0 00-3.8 23.4c.6.1.8-.3.8-.6v-2.3c-3.3.7-4-1.6-4-1.6-.5-1.3-1.1-1.6-1.1-1.6-.9-.6.1-.6.1-.6 1 .1 1.6 1 1.6 1 .9 1.6 2.4 1.1 3 .8.1-.7.4-1.1.7-1.4-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.4 1.2-3.3-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 016 0c2.2-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.1.8.9 1.2 2 1.2 3.3 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.3v3.4c0 .3.2.7.8.6A12 12 0 0012 .5z"/></svg>
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=61553561515474" target="_blank" rel="noreferrer" className="text-slate-700 dark:text-slate-200 hover:text-sky-600">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8"><path d="M22 12c0-5.522-4.477-10-10-10S2 6.478 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.99H7.898v-2.888h2.54V9.797c0-2.507 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562v1.874h2.773l-.443 2.888h-2.33v6.99C18.343 21.128 22 16.991 22 12z"/></svg>
+                </a>
+                <a href="https://www.instagram.com/achiya.xt/" target="_blank" rel="noreferrer" className="text-slate-700 dark:text-slate-200 hover:text-sky-600">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8"><path d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm5 5.5A4.5 4.5 0 1112 16.5 4.5 4.5 0 0112 7.5zm6.5-.75a1.125 1.125 0 11-2.25 0 1.125 1.125 0 012.25 0zM12 9.5a2.5 2.5 0 100 5 2.5 2.5 0 000-5z"/></svg>
+                </a>
+                <a href="https://www.linkedin.com/in/achintha-shanuka-abeysinghe-45a347318" target="_blank" rel="noreferrer" className="text-slate-700 dark:text-slate-200 hover:text-sky-600">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.11 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8h4V24h-4zM8.5 8h3.75v2.16h.05c.52-.98 1.8-2.02 3.7-2.02 3.96 0 4.7 2.61 4.7 6.01V24h-4v-7.5c0-1.79-.03-4.09-2.5-4.09-2.5 0-2.88 1.94-2.88 3.97V24h-4z"/></svg>
+                </a>
+              </div>
+
+              <div className="mt-8">
+                <p className="text-sm text-slate-700 dark:text-slate-300">Prefer email?</p>
+                <a href="mailto:shanukabro238@gmail.com" className="inline-block mt-2 text-sky-600 dark:text-sky-400 underline decoration-sky-600/40">shanukabro238@gmail.com</a>
+              </div>
             </div>
           </div>
         </section>
