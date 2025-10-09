@@ -179,7 +179,6 @@ export default function Home() {
               <p className="mt-4 text-slate-700 dark:text-slate-300">Hi, I'm Shanuka Abeysinghe, a web developer from Sri Lanka, born in 2006. My education journey began at Sri Chandananda Buddhist College, Kandy. This diverse educational background has equipped me with a broad perspective and a passion for learning.
                 <br></br><br></br>I am currently an undergraduate at ICBT Kandy Campus pursuing a Bsc(Hons) Software Engineering. My dedication to continuous learning enables me to stay update with new technologies and seeking ways to enhance my skills. Here are some technologies that I have worked with,</p>
               <div className="mt-4">
-                <p className="text-sm text-slate-500 dark:text-slate-400">Tools & technologies:</p>
                 <div role="list" className="mt-2 flex flex-wrap gap-3">
                   <span role="listitem" className="px-3 py-1 text-sm font-medium rounded-full bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-100 flex items-center">
                     <img src="/src/assets/html.png" alt="HTML" className="inline-block mr-2 h-5 w-5 flex-none object-contain" loading="lazy" />
@@ -254,29 +253,40 @@ export default function Home() {
         <section id="experience" className="snap-start min-h-screen flex items-center">
           <div className="max-w-5xl mx-auto px-6 py-12 w-full">
             <h3 className="text-2xl font-semibold">Experience</h3>
-            <div className="mt-6 space-y-8">
-              <div className="relative pl-8">
-                <div className="absolute left-0 top-2 h-full w-0.5 bg-slate-200 dark:bg-slate-700" />
-                <div className="mb-6">
-                  <div className="flex items-center gap-4">
-                    <div className="flex-none w-10 h-10 rounded-full bg-sky-600 text-white flex items-center justify-center">A</div>
-                    <div>
-                      <h4 className="font-semibold">Frontend Engineer — Acme Co</h4>
-                      <p className="text-sm text-slate-500 dark:text-slate-300">Jan 2023 — Present</p>
+            <div className="mt-6">
+              {/*
+              <div className="mt-6 space-y-8">
+                <div className="relative pl-8">
+                  <div className="absolute left-0 top-2 h-full w-0.5 bg-slate-200 dark:bg-slate-700" />
+                  <div className="mb-6">
+                    <div className="flex items-center gap-4">
+                      <div className="flex-none w-10 h-10 rounded-full bg-sky-600 text-white flex items-center justify-center">A</div>
+                      <div>
+                        <h4 className="font-semibold">Frontend Engineer — Acme Co</h4>
+                        <p className="text-sm text-slate-500 dark:text-slate-300">Jan 2023 — Present</p>
+                      </div>
                     </div>
+                    <p className="mt-3 text-slate-700 dark:text-slate-300">Built user-facing features with React and Tailwind, improved site performance, and led accessibility audits.</p>
                   </div>
-                  <p className="mt-3 text-slate-700 dark:text-slate-300">Built user-facing features with React and Tailwind, improved site performance, and led accessibility audits.</p>
-                </div>
 
-                <div className="mb-6">
-                  <div className="flex items-center gap-4">
-                    <div className="flex-none w-10 h-10 rounded-full bg-sky-600 text-white flex items-center justify-center">B</div>
-                    <div>
-                      <h4 className="font-semibold">Software Developer — Beta Labs</h4>
-                      <p className="text-sm text-slate-500 dark:text-slate-300">Jun 2020 — Dec 2022</p>
+                  <div className="mb-6">
+                    <div className="flex items-center gap-4">
+                      <div className="flex-none w-10 h-10 rounded-full bg-sky-600 text-white flex items-center justify-center">B</div>
+                      <div>
+                        <h4 className="font-semibold">Software Developer — Beta Labs</h4>
+                        <p className="text-sm text-slate-500 dark:text-slate-300">Jun 2020 — Dec 2022</p>
+                      </div>
                     </div>
+                    <p className="mt-3 text-slate-700 dark:text-slate-300">Worked on full-stack features, API integrations, and devops automation for CI/CD pipelines.</p>
                   </div>
-                  <p className="mt-3 text-slate-700 dark:text-slate-300">Worked on full-stack features, API integrations, and devops automation for CI/CD pipelines.</p>
+                </div>
+              </div>
+              */}
+
+              <div className="w-full py-20 flex items-center justify-center">
+                <div className="text-center">
+                  <h4 className="text-xl font-semibold text-slate-700 dark:text-slate-200">Pending</h4>
+                  <p className="mt-2 text-sm text-slate-500 dark:text-slate-400">Experience details coming soon.</p>
                 </div>
               </div>
             </div>
@@ -284,17 +294,56 @@ export default function Home() {
         </section>
 
         <section id="projects" className="snap-start min-h-screen flex items-center">
-          <div className="max-w-5xl mx-auto px-6 py-12 w-full">
-            <h3 className="text-2xl font-semibold">Featured projects</h3>
-            <div className="mt-6 grid md:grid-cols-2 gap-6">
-              <article className="p-6 bg-white rounded-lg shadow dark:bg-slate-900/60">
-                <h4 className="font-semibold">Project One</h4>
-                <p className="mt-2 text-slate-600 dark:text-slate-300">A short description of the project. Tech: React, Tailwind.</p>
+          <div className="max-w-6xl mx-auto px-6 py-12 w-full">
+            <h3 className="text-2xl font-semibold">Projects</h3>
+
+            <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+              {/* Card 1 */}
+              <article className="relative p-6 rounded-lg border border-blue-500 bg-slate-900 text-white shadow-lg overflow-hidden">
+                <div className="absolute top-4 right-4 flex items-center gap-2">
+                  <a href="https://github.com/Shanuka238/Party-Nest-Event-Mangement-system.git" aria-label="GitHub" className="p-1 rounded hover:bg-white/5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 text-white/90"><path d="M12 .5a12 12 0 00-3.8 23.4c.6.1.8-.3.8-.6v-2.3c-3.3.7-4-1.6-4-1.6-.5-1.3-1.1-1.6-1.1-1.6-.9-.6.1-.6.1-.6 1 .1 1.6 1 1.6 1 .9 1.6 2.4 1.1 3 .8.1-.7.4-1.1.7-1.4-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.4 1.2-3.3-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 016 0c2.2-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.1.8.9 1.2 2 1.2 3.3 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.3v3.4c0 .3.2.7.8.6A12 12 0 0012 .5z"/></svg>
+                  </a>
+                  <a href="https://party-nest-event-mangement-system.vercel.app/" aria-label="Open project" className="p-1 rounded hover:bg-white/5">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-5 h-5 text-white/90"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 3h7v7M10 14L21 3"/></svg>
+                  </a>
+                </div>
+
+                <h4 className="text-2xl font-bold text-blue-400">Party Nest</h4>
+                <p className="text-sm text-slate-400 mt-1">2025</p>
+
+                <p className="mt-4 text-sm text-slate-200 leading-relaxed">A dynamic web application designed that allows users to book their event, customize events, and organize them. It offers some features that enhance user experience and streamline the ......</p>
+
+                <div className="mt-5 flex flex-wrap gap-2">
+                  <span className="inline-block bg-blue-500/20 border border-blue-500 text-blue-400 px-3 py-1 rounded-full text-xs">ReactJS</span>
+                  <span className="inline-block bg-blue-500/20 border border-blue-500 text-blue-400 px-3 py-1 rounded-full text-xs">Vite</span>
+                  <span className="inline-block bg-blue-500/20 border border-blue-500 text-blue-400 px-3 py-1 rounded-full text-xs">Tailwind CSS</span>
+                  <span className="inline-block bg-blue-500/20 border border-blue-500 text-blue-400 px-3 py-1 rounded-full text-xs">ExpressJS</span>
+                  <span className="inline-block bg-blue-500/20 border border-blue-500 text-blue-400 px-3 py-1 rounded-full text-xs">NodeJS</span>
+                </div>
               </article>
-              <article className="p-6 bg-white rounded-lg shadow dark:bg-slate-900/60">
-                <h4 className="font-semibold">Project Two</h4>
-                <p className="mt-2 text-slate-600 dark:text-slate-300">A short description of the project. Tech: Node, Express, MongoDB.</p>
+
+              {/* Card 2 */}
+              <article className="relative p-6 rounded-lg border border-blue-500 bg-slate-900 text-white shadow-lg overflow-hidden">
+                <div className="absolute top-4 right-4 flex items-center gap-2">
+                  <a href="https://github.com/Shanuka238/Fitzone-Fitness-Center" aria-label="GitHub" className="p-1 rounded hover:bg-white/5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 text-white/90"><path d="M12 .5a12 12 0 00-3.8 23.4c.6.1.8-.3.8-.6v-2.3c-3.3.7-4-1.6-4-1.6-.5-1.3-1.1-1.6-1.1-1.6-.9-.6.1-.6.1-.6 1 .1 1.6 1 1.6 1 .9 1.6 2.4 1.1 3 .8.1-.7.4-1.1.7-1.4-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.4 1.2-3.3-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 016 0c2.2-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.1.8.9 1.2 2 1.2 3.3 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.3v3.4c0 .3.2.7.8.6A12 12 0 0012 .5z"/></svg>
+                  </a>
+                </div>
+
+                <h4 className="text-2xl font-bold text-blue-400">Fitzone Fitness</h4>
+                <p className="text-sm text-slate-400 mt-1">2025</p>
+
+                <p className="mt-4 text-sm text-slate-200 leading-relaxed">A simple web application designed that allows users to make gym schedules, book schedules, and provide a efficient member-staff communication. This application is built by usi.....</p>
+
+                <div className="mt-5 flex flex-wrap gap-2">
+                  <span className="inline-block bg-blue-500/20 border border-blue-500 text-blue-400 px-3 py-1 rounded-full text-xs">HTML</span>
+                  <span className="inline-block bg-blue-500/20 border border-blue-500 text-blue-400 px-3 py-1 rounded-full text-xs">CSS</span>
+                  <span className="inline-block bg-blue-500/20 border border-blue-500 text-blue-400 px-3 py-1 rounded-full text-xs">PHP</span>
+                  <span className="inline-block bg-blue-500/20 border border-blue-500 text-blue-400 px-3 py-1 rounded-full text-xs">MySQL</span>
+                </div>
               </article>
+
             </div>
           </div>
         </section>
