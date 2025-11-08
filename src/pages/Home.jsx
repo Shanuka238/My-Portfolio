@@ -336,7 +336,7 @@ export default function Home() {
                 <h4 className="text-2xl font-bold text-blue-400">Party Nest</h4>
                 <p className="text-sm text-slate-500 mt-1 dark:text-slate-300">2025</p>
 
-                <p className="mt-4 text-sm text-slate-700 dark:text-slate-200 leading-relaxed">A dynamic web application designed that allows users to book their event, customize events, and organize them. It offers some features that enhance user experience and streamline the ......</p>
+                <p className="mt-4 text-sm text-slate-700 dark:text-slate-200 leading-relaxed">A dynamic web application designed that allows users to book their event, customize events, and organize them. It offers some features that enhance user experience and streamline the......</p>
 
                 <div className="mt-5 flex flex-wrap gap-2">
                   <span className="inline-block bg-blue-500/20 border border-blue-500 text-blue-400 px-3 py-1 rounded-full text-xs">ReactJS</span>
@@ -364,6 +364,28 @@ export default function Home() {
                   <span className="inline-block bg-blue-500/20 border border-blue-500 text-blue-400 px-3 py-1 rounded-full text-xs">HTML</span>
                   <span className="inline-block bg-blue-500/20 border border-blue-500 text-blue-400 px-3 py-1 rounded-full text-xs">CSS</span>
                   <span className="inline-block bg-blue-500/20 border border-blue-500 text-blue-400 px-3 py-1 rounded-full text-xs">PHP</span>
+                  <span className="inline-block bg-blue-500/20 border border-blue-500 text-blue-400 px-3 py-1 rounded-full text-xs">MySQL</span>
+                </div>
+              </article>
+
+              {/* Card 3 */}
+              <article className="relative p-6 rounded-2xl border border-blue-500 bg-white/90 dark:bg-slate-800/70 text-slate-800 dark:text-slate-100 shadow-lg backdrop-blur-sm overflow-hidden">
+                <div className="absolute top-4 right-4 flex items-center gap-2">
+                  <a href="https://github.com/Shanuka238/The-Gadget-Hub" aria-label="GitHub" className="p-1 rounded hover:bg-white/5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 text-slate-700 dark:text-white/90"><path d="M12 .5a12 12 0 00-3.8 23.4c.6.1.8-.3.8-.6v-2.3c-3.3.7-4-1.6-4-1.6-.5-1.3-1.1-1.6-1.1-1.6-.9-.6.1-.6.1-.6 1 .1 1.6 1 1.6 1 .9 1.6 2.4 1.1 3 .8.1-.7.4-1.1.7-1.4-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.4 1.2-3.3-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 016 0c2.2-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.1.8.9 1.2 2 1.2 3.3 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.3v3.4c0 .3.2.7.8.6A12 12 0 0012 .5z"/></svg>
+                  </a>
+                </div>
+
+                <h4 className="text-2xl font-bold text-blue-400">
+                  Gadget HUB</h4>
+                <p className="text-sm text-slate-500 mt-1 dark:text-slate-300">2025</p>
+
+                <p className="mt-4 text-sm text-slate-700 dark:text-slate-200 leading-relaxed">A web application designed that allows users to find and choose products, order products, and see the orders and received quotations. This application is built by usi.....</p>
+
+                <div className="mt-5 flex flex-wrap gap-2">
+                  <span className="inline-block bg-blue-500/20 border border-blue-500 text-blue-400 px-3 py-1 rounded-full text-xs">HTML</span>
+                  <span className="inline-block bg-blue-500/20 border border-blue-500 text-blue-400 px-3 py-1 rounded-full text-xs">CSS</span>
+                  <span className="inline-block bg-blue-500/20 border border-blue-500 text-blue-400 px-3 py-1 rounded-full text-xs">C#</span>
                   <span className="inline-block bg-blue-500/20 border border-blue-500 text-blue-400 px-3 py-1 rounded-full text-xs">MySQL</span>
                 </div>
               </article>
